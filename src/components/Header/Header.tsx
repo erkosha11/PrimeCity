@@ -1,6 +1,18 @@
+import { useState } from "react";
+import BurgerMenu  from "./components/BurgerMenu";
 import s from "./Header.module.scss";
+import BgMenuImg from '../../assets/bgmenu.svg';
 
 export const Header = () => {
+  const [isMenuActive, setMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuActive(!isMenuActive);
+  };
+
+  const closeMenu = () => {
+    setMenuActive(false);
+  };
   return (
     <header>
       <div className="container">
@@ -8,7 +20,7 @@ export const Header = () => {
           <h1>
             <span> Услуги</span> в Астана
           </h1>
-          <nav>
+          <nav className={s.nav}>
             <ul>
               <li>
                 <a href="">На главную</a>
@@ -32,6 +44,10 @@ export const Header = () => {
               <button className={s.phone}>Звонок</button>
             </a>
           </div>
+          <div className={s.BurgerMenuOpen} onClick={toggleMenu}>
+            <img src={BgMenuImg} alt="Menu" />
+          </div>
+          <BurgerMenu isOpen={isMenuActive} onClose={closeMenu} />
         </div>
       </div>
     </header>

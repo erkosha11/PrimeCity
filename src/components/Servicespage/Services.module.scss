@@ -37,3 +37,22 @@
     }
   }
 }
+
+
+@media screen and (max-width: 605px) {
+.servicesHeader{
+  flex-direction: column;
+
+  p{
+    margin-bottom: 0 !important;
+  }
+
+  button{
+    margin: 30px 0;
+  }
+}
+}
+
+@media screen and (max-width: 605px) {
+
+}

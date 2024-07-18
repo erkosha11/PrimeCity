@@ -4,23 +4,11 @@
   background-size: cover;
   background-position: top;
 
-  height: 590px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 1;
-  }
   .homeContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 590px;
+    min-height: 590px;
 
     .hometxt {
       max-width: 50%;
@@ -52,7 +40,7 @@
       p {
         font-size: 18px;
 
-        span{
+        span {
           font-size: 25px;
         }
       }
@@ -64,7 +52,42 @@
       img {
         max-width: 100%;
         height: auto;
-        border-radius: 30px; /* Автоматическая высота для сохранения пропорций */
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .homeContent {
+    justify-content: center !important;
+    flex-direction: column-reverse;
+    // height: 700px !important;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .homeContent {
+    .hometxt {
+      h1 {
+        font-size: 40px !important;
+      }
+      span{
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .homeContent {
+    .hometxt {
+      h1 {
+        font-size: 30px !important;
+      }
+      span{
+        font-size: 15px !important;
       }
     }
   }

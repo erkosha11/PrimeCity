@@ -1,19 +1,8 @@
 .Found {
   position: relative;
-  background-image: url("../../assets/found.jpeg");
+  background-image: url("../../assets/found.jpg");
   background-size: cover;
   background-position: top;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-  }
 
   .foundContent {
     display: flex;
@@ -81,6 +70,34 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .foundText {
+    text-align: center;
+    h1 {
+      font-size: 30px !important;
+    }
+    p {
+      font-size: 20px !important;
+    }
+
+    button {
+      padding: 15px 30px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .foundText {
+    padding: 0 !important;
+    border: none !important;
+
+    button {
+      padding: 10px 20px !important;
+      font-size: 15px !important;
     }
   }
 }

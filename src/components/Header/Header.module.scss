@@ -76,15 +76,38 @@ header {
           color: #007bff;
           border: 1px solid #007bff;
         }
+      }
+    }
+
+    .BurgerMenuOpen {
+      display: none;
     }
   }
-}
 }
 
 @media screen and (max-width: 1027px) {
   header {
-    a{
+    a {
       font-size: 17px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  header {
+    a {
+      font-size: 17px !important;
+    }
+
+    .nav {
+      display: none !important;
+    }
+
+    .headerButtons {
+      display: none !important;
+    }
+    .BurgerMenuOpen {
+      display: flex !important;
     }
   }
 }
