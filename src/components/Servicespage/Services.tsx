@@ -14,7 +14,7 @@ export const Services = () => {
                 ниже
               </p>
             </div>
-            <button>WhatsApp</button>
+            <a href="https://api.whatsapp.com/send?phone=7017587203"><button className={s.wp}>WhatsApp</button></a>
           </div>
           <div className={s.servicesCards}>
             <Text />

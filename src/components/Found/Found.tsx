@@ -10,8 +10,8 @@ export const Found = () => {
             <p>Свяжитесь с нами и спросите лично!</p>
             <p>Мы выполняем более 50-ти различных услуг по городу Астана</p>
             <div className={s.foundButton}>
-              <button>WhatsApp</button>
-              <a href="tel:87017587203"><button>Звонок</button></a>
+              <a href="https://api.whatsapp.com/send?phone=7017587203"><button className={s.wp}>WhatsApp</button></a>
+              <a href="tel:87017587203"><button className={s.phone}>Звонок</button></a>
             </div>
           </div>
         </div>

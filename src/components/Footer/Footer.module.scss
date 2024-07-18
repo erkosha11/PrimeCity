@@ -1,0 +1,27 @@
+.footer {
+  background-color: #292929;
+  padding: 50px 0;
+  color: white;
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin: 5px 0;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    div {
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

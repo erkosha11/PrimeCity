@@ -52,32 +52,39 @@ header {
         cursor: pointer;
         font-weight: 600;
 
-        &:first-child {
-          background-color: #25d366;
-          color: #fff;
-
-          &:hover{
-            background-color: #fff;
-            color: #25d366;
-            border: 1px solid #25d366;
-          }
-        }
-
-        &:last-child {
-          background-color: #007bff;
-          color: #fff;
-
-          &:hover{
-            background-color: #fff;
-            color: #007bff;
-            border: 1px solid #007bff;
-          }
-        }
-
         &:hover {
           opacity: 0.9;
         }
       }
+      .wp {
+        background-color: #25d366;
+        color: #fff;
+
+        &:hover {
+          background-color: #fff;
+          color: #25d366;
+          border: 1px solid #25d366;
+        }
+      }
+
+      .phone {
+        background-color: #007bff;
+        color: #fff;
+
+        &:hover {
+          background-color: #fff;
+          color: #007bff;
+          border: 1px solid #007bff;
+        }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 1027px) {
+  header {
+    a{
+      font-size: 17px !important;
     }
   }
 }
