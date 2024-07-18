@@ -6,7 +6,7 @@ export const Header = () => {
       <div className="container">
         <div className={s.headerContent}>
           <h1>
-            <span> Услуги</span> в Кызылорде
+            <span> Услуги</span> в Астана
           </h1>
           <nav>
             <ul>
@@ -14,7 +14,7 @@ export const Header = () => {
                 <a href="">На главную</a>
               </li>
               <li>
-                <a href="">Услуги</a>
+                <a href="#Services">Услуги</a>
               </li>
               <li>
                 <a href="">Как мы работаем?</a>
@@ -26,7 +26,7 @@ export const Header = () => {
           </nav>
           <div className={s.headerButtons}>
             <button>WhatsApp</button>
-            <button>Звонок</button>
+            <a href="tel:87017587203"><button>Звонок</button></a>
           </div>
         </div>
       </div>

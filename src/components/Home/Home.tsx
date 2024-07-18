@@ -9,7 +9,7 @@ export const Home = () => {
           <div className={s.hometxt}>
             <h1>
               Установочные услуги
-              <br />В Кызылорде
+              <br />В Астана
             </h1>
             <h2>Моментальный выезд!</h2>
             <a href=""><span>+7 (701)758-72-03</span></a>

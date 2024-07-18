@@ -5,9 +5,16 @@ html {
   font-family: "PT Sans", sans-serif;
 
   .container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 2;
+  }
+}
+
+@media screen and (max-width: 1229px) {
+  .container {
+    width: 90% !important;
   }
 }
