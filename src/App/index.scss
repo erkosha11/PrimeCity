@@ -1,0 +1,10 @@
+@import url("./styles/_normalize.scss");
+
+html {
+  scroll-behavior: smooth;
+
+  .container {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
