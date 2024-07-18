@@ -17,10 +17,10 @@ export const Header = () => {
                 <a href="#Services">Услуги</a>
               </li>
               <li>
-                <a href="">Как мы работаем?</a>
+                <a href="#Job">Как мы работаем?</a>
               </li>
               <li>
-                <a href="">Контакты</a>
+                <a href="#Contacts">Контакты</a>
               </li>
             </ul>
           </nav>
