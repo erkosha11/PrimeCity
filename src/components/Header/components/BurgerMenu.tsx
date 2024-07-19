@@ -20,29 +20,31 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
                 <img src={closeImg} alt="" />
               </button>
             </div>
-            <nav>
-              <ul>
-                <li>
-                  <a href="">На главную</a>
-                </li>
-                <li>
-                  <a href="#Services">Услуги</a>
-                </li>
-                <li>
-                  <a href="#Job">Как мы работаем?</a>
-                </li>
-                <li>
-                  <a href="#Contacts">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-            <div className={s.headerButtons}>
-              <a href="https://api.whatsapp.com/send?phone=7017587203">
-                <button className={s.wp}>WhatsApp</button>
-              </a>
-              <a href="tel:87017587203">
-                <button className={s.phone}>Звонок</button>
-              </a>
+            <div className={s.bgmenuContent}>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="">На главную</a>
+                  </li>
+                  <li>
+                    <a href="#Services">Услуги</a>
+                  </li>
+                  <li>
+                    <a href="#Job">Как мы работаем?</a>
+                  </li>
+                  <li>
+                    <a href="#Contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div className={s.headerButtons}>
+                <a href="https://api.whatsapp.com/send?phone=7017587203">
+                  <button className={s.wp}>WhatsApp</button>
+                </a>
+                <a href="tel:87017587203">
+                  <button className={s.phone}>Звонок</button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
