@@ -14,7 +14,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
           <div className="container">
             <div className={s.bgmenuHeader}>
               <h1>
-                <span> Услуги</span> в Астана
+                <span> PrimeCity</span>
               </h1>
               <button className={s.close}>
                 <img src={closeImg} alt="" />
