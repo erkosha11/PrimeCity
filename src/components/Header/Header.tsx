@@ -18,7 +18,7 @@ export const Header = () => {
       <div className="container">
         <div className={s.headerContent}>
           <h1>
-            <span> Услуги</span> в Астана
+            <span> PrimeCity</span>
           </h1>
           <nav className={s.nav}>
             <ul>

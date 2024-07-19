@@ -7,14 +7,15 @@ export const Footer = () => {
         <div className={s.footerContent}>
           <div>
             <p>
-              <strong>Тоо PrimeCity</strong>
+              <strong>ТOO PrimeCity</strong>
             </p>
             <p>
-              Казахстан, г. Астана, ул. Казыбек Би дом 5А, 417, индекс 010000
+              Казахстан, г. Астана.
+              <br /> ул. Казыбек Би дом 5А, 417, индекс 010000
             </p>
           </div>
           <div>
-            <p>Генеральный директор, Балпышев Арсен Аскарбекович</p>
+            <p>Ответственное лицо Балпышев Арсен Аскарбекович</p>
             <p>
               <a href="mailto:arsen.balpyshev@gmail.com">
                 arsen.balpyshev@gmail.com

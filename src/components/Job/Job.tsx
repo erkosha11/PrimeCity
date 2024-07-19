@@ -38,7 +38,7 @@ export const Job = () => {
 
             <div className={s.jobCard}>
               <img className={s.jobPayImg} src={PayImg} alt="" />
-              <p>Оплата</p>
+              <p>Оплата наличным и безналичным расчетом </p>
             </div>
           </div>
         </div>

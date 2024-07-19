@@ -1,8 +1,8 @@
 .text {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  gap: 50px;
 
   .card {
     width: 260px;
