@@ -11,10 +11,15 @@ export const Services = () => {
               <h1>Наши услуги</h1>
               <p>
                 Выберите подходящую услугу для вас и свяжитесь с нами по кнопке
-                ниже
+                справа
               </p>
             </div>
+            <div className={s.servicesButtons}>
             <a href="https://api.whatsapp.com/send?phone=7017587203"><button className={s.wp}>WhatsApp</button></a>
+            <a href="tel:87017587203">
+              <button className={s.phone}>Звонок</button>
+            </a>
+            </div>
           </div>
           <div className={s.servicesCards}>
             <Text />

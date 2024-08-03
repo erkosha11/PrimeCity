@@ -7,7 +7,8 @@ export const Home = () => {
       <div className="container">
         <div className={s.homeContent}>
           <div className={s.hometxt}>
-            <h1> Внутренние и наружные установки работы</h1>
+            <h1> Мы работаем для Вас!</h1>
+            <p>Отделочно-монтажные работы широчайшего спектра</p>
             <h2>Моментальный выезд!</h2>
             <a href="tel:87017587203">
               <span>+7 (701)758-72-03</span>
