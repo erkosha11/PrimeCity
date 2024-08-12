@@ -10,14 +10,16 @@ export const Footer = () => {
               <strong>ТOO PrimeCity</strong>
             </p>
             <p>
-              Казахстан, г. Астана.
-              <br /> ул. Казыбек Би дом 5А, 417, индекс 010000
+              Казахстан, Z05X2Y1
+              <br /> г.Астана,
+              <br />
+              ул. Қазыбек би, дом 5А
             </p>
           </div>
           <div>
-            <p>Ответственное лицо Балпышев Арсен Аскарбекович</p>
+            <p>Ответственное лицо – Арсен Балпышев</p>
             <p>
-              <a href="mailto:arsen.balpyshev@gmail.com">
+              <a href="mailto:arsen.balpyshev@gmail.com ">
                 arsen.balpyshev@gmail.com
               </a>
             </p>

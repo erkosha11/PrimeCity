@@ -28,12 +28,12 @@ export const Job = () => {
 
             <div className={s.jobCard}>
               <img className={s.jobCalcImg} src={CalcImg} alt="" />
-              <p>Расчёт примерной стоимости вашего ремонта</p>
+              <p>Расчет примерной стоимости Вашего заказа</p>
             </div>
 
             <div className={s.jobCard}>
               <img className={s.jobCarImg} src={CarImg} alt="" />
-              <p>Выезд мастера и ремонт в ближайшее время</p>
+              <p>Выезд мастера и монтаж в кратчайший срок</p>
             </div>
 
             <div className={s.jobCard}>
