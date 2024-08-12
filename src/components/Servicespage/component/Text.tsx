@@ -1,77 +1,86 @@
+import React, { useState } from "react";
+import { Button, Modal } from "antd";
 import s from "./Text.module.scss";
 import OknoImg from "../../../assets/okno.jpg";
 import OtoplenieImg from "../../../assets/otoplenie.jpg";
 import BezopastImg from "../../../assets/bezopast.jpg";
 import PolImg from "../../../assets/pol.jpg";
 import ZaborImg from "../../../assets/zabor.jpg";
+import servicesData from "../../../App/servicesData.json";
 
-export const Text = () => {
+interface Service {
+  image: string;
+  alt: string;
+  title: string;
+  description: string[];
+}
+
+const images: { [key: string]: string } = {
+  OknoImg,
+  OtoplenieImg,
+  BezopastImg,
+  PolImg,
+  ZaborImg,
+};
+
+export const Text: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  const showModal = (service: Service) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+    setSelectedService(null);
+  };
+
   return (
     <div className={s.text}>
-      <div className={s.card}>
-        <img src={OknoImg} alt="Монтаж окон" />
-        <h1>МОНТАЖ ОКОН, ДВЕРЕЙ И ПЕРЕГОРОДОК </h1>
-        <p>
-        Входные группы; <br />
-        Грязезащитные системы (придверные решетки, коврики, поддоны и опорные конструкции); <br />
-        Двери входные и межкомнатные; <br />
-        Окна, балконы, лоджии (стандартные, увеличенные, витражные) <br />
-        Внутренние стеклянные витражи для зонирования пространств (межкомнатные, душевые, офисные)... <br />
-        Материалы: ПВХ, пластик, поликарбонат, аллюминий, сталь, МДФ, дерево <br />
-        Способы открывания: распашные, раздвижные, маятниковые, поворотно-складные
-        </p>
-      </div>
+      {servicesData.services.map((service: Service, index: number) => (
+        <div key={index} className={s.card}>
+          <img src={images[service.image]} alt={service.alt} />
+          <h1>{service.title}</h1>
+          <Button type="primary" onClick={() => showModal(service)}>
+            Подробнее
+          </Button>
+        </div>
+      ))}
 
-      <div className={s.card}>
-        <img src={OtoplenieImg} alt="Установка систем отопления" />
-        <h1>МОНТАЖ СИСТЕМ ВОДОСНАБЖЕНИЯ, ОТОПЛЕНИЯ, КАНАЛИЗАЦИИ и ФИЛЬТРАЦИИ</h1>
-        <p>
-        Водоснабжение центральное и автономное (монтаж и обустройство скважин, насосы для скважин); <br />
-        Отопление центральное и автономное (радиаторы, котлы (электрические, газовые, угольные, на ДТ), водяные и электрические теплые полы); <br />
-        Канализация центральная и автономная (септики, в т.ч. с фильтрацией сточных вод для вторичного (технического) использования (полив участков, газонов, смыв в сан.узлах); <br />
-        Фильтация воды (грубая, средняя и глубокая очистка)...
-
-        </p>
-      </div>
-
-      <div className={s.card}>
-        <img src={BezopastImg} alt="Установка систем безопасности" />
-        <h1>МОНТАЖ СИСТЕМ БЕЗОПАСНОСТИ</h1>
-        <p>Охранные сигнализации;<br />
-            Видеонаблюдение; <br />
-            Системы удаленного доступа (электронные замки и домофоны биометрические (Face-ID, отпечатки), кодовые, карточные); <br />
-            Пожарные сигнализации...
-        </p>
-      </div>
-
-      <div className={s.card}>
-        <img src={PolImg} alt="Установка полов и покрытий" />
-        <h1>УКЛАДКА НАПОЛЬНЫХ ПОКРЫТИЙ и ПЛИТОЧНЫЕ РАБОТЫ </h1>
-        <p>Ламинат;
-            Линолеум; <br />
-            Кварц-винил; <br />
-            Наливные полы (в т.ч. фибробетон); <br />
-            Паркет и паркетная доска; <br />
-            Керамическая плитка (керамогранит, кафель, мозаика); <br />
-            Натуральный камень...
-</p>
-      </div>
-
-      <div className={s.card}>
-        <img src={ZaborImg} alt="Установка ограждений и ворот" />
-        <h1>Установка ограждений и ворот</h1>
-        <p>Ворота (распашные, откатные, рулонные, секционные, складные);
-            Евроштакетник; <br />
-            Штакетник деревянный; <br />
-            Жалюзи металлические; <br />
-            Металлический сайдинг; <br />
-            3D, 2D сетчатые металлические ограждения; <br />
-            Ковка; <br />
-            Камень; <br />
-            Профнастил; <br />
-            Сетка Рабица... <br />
-</p>
-      </div>
+      {selectedService && (
+        <Modal
+          title={null}
+          open={isModalOpen}
+          onCancel={handleCancel}
+          footer={null} // Убираем кнопки Cancel и OK
+        >
+          <div className={s.modalContent}>
+            <div className={s.modalLeft}>
+              <img
+                src={images[selectedService.image]}
+                alt={selectedService.alt}
+                style={{
+                  maxWidth: "100%",
+                  borderRadius: "8px",
+                  width: "472px",
+                }}
+              />
+              <h1 style={{ marginTop: "10px" }}>{selectedService.title}</h1>
+            </div>
+            <div className={s.modalRight}>
+              <ul>
+                {selectedService.description.map(
+                  (desc: string, index: number) => (
+                    <li key={index}>{desc}</li>
+                  )
+                )}
+              </ul>
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };

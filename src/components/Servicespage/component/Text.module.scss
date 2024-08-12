@@ -1,11 +1,13 @@
 .text {
   display: flex;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 60px;
 
   .card {
     width: 260px;
+    text-align: center;
 
     img {
       width: 260px;
@@ -19,6 +21,14 @@
     p {
       font-size: 17px;
     }
+  }
+}
+
+.modalContent {
+  padding-top: 30px;
+
+  h1{
+    font-size: 22px;
   }
 }
 
